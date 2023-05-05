@@ -3,11 +3,11 @@
 if($_SERVER['SERVER_NAME'] == 'localhost'){
     /** database config */
     define('DBNAME', 'my_db'); // change database name
-    define('DBHOST', 'localhost:3309'); // change port
+    define('DBHOST', 'localhost:3311'); // change port
     define('DBUSER', 'root');
     define('DBPASS', '');
 
-    define('ROOT', 'http://localhost/mvc/public');
+    define('ROOT', 'http://localhost/CVblog/public');
 }
 else{
     define('DBNAME', 'my_db');
