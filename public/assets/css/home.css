@@ -1,0 +1,124 @@
+.home {
+  /* display: flex; */
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.home .container {
+  padding-top: 70px;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+.home .row {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.home h1 {
+  margin: 10px auto;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+  text-shadow: 2px 0 #2dc46a, -2px 0 #2dc46a, 0 2px #2dc46a, 0 -2px #2dc46a,
+    1px 1px #2dc46a, -1px -1px #2dc46a, 1px -1px #2dc46a, -1px 1px #2dc46a;
+  letter-spacing: 3px;
+}
+.home h3 {
+  margin: 0 auto;
+  color: black;
+  opacity: 0.7;
+}
+.home h5 {
+  margin: 0 auto;
+  color: gray;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.home .btn-create {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 28px 11px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 30px auto;
+  color: #fff;
+  background: #626ccc;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.home .btn-create:hover {
+  background: #626ccc;
+  opacity: 1;
+}
+.home .home-img {
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 991px) {
+  .home .animated {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .home h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .home h5 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+  }
+  .home .btn-create {
+    font-size: 12px;
+    padding: 10px 24px 11px 24px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.home .btn {
+  background-color: #626ccc;
+  color: white;
+}
+/* 3 cards */
+.home h4 {
+  font-size: 21px;
+  text-align: center;
+}
+.home .mycard {
+  margin-right: 5%;
+}
+.home .mycard img {
+  display: block;
+  margin: 10px auto;
+}
+.home p {
+  text-align: justify;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

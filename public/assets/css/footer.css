@@ -1,0 +1,9 @@
+section.myfooter {
+  background-color: black;
+  max-width: 100%;
+  color: white;
+  font-size: 16px;
+}
+.myfooter .nav-item:hover {
+  text-decoration: underline;
+}

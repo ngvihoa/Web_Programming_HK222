@@ -1,0 +1,57 @@
+section.mynav {
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+nav {
+  background-color: #2dc46a;
+}
+.navbar-logo img {
+  width: 55px;
+  height: 55px;
+}
+nav .nav-item {
+  padding: 0 40px;
+}
+nav .nav-item:hover {
+  background-color: #626ccc;
+  font-weight: bold;
+}
+nav .myhello {
+  padding: 0 40px;
+  color: #ffffff;
+}
+.nav-item .nav-link {
+  color: #ffffff;
+}
+.navbar-toggler {
+  border: none;
+  padding: 10px 6px;
+  outline: none;
+}
+.navbar-toggler span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+}
+.navbar-toggler span + span {
+  margin-top: 4px;
+  width: 18px;
+  margin-left: 4px;
+}
+.navbar-toggler span + span + span {
+  width: 10px;
+  margin-left: 10px;
+}
+.mynav .btn {
+  background-color: #f7f7f7;
+  border-radius: 50px;
+  margin: 0 40px;
+}
+.mynav .btn:hover {
+  box-shadow: 15px 1px #626ccc;
+}
