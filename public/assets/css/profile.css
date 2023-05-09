@@ -6,3 +6,464 @@
 
 }
 
+html::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: var(--color3);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================ */
+
+nav.bg-color1{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.space{
+    height: 50px;
+    width: 100%;
+    background-color: #2DC46A;
+}
+/* 
+#collapsibleNavbar{
+    margin: 10px 0 0 0;
+}
+
+.container-fluid{
+    padding: 0;
+} */
+
+.bg-color1{
+    background-color: var(--color1);
+}
+
+.bg-color1 div{
+    color: var(--color);
+    width: 100%;
+}
+
+.bg-color1 div a{
+    color: var(--color);
+    background-color: var(--color1);
+}
+
+.bg-color1 div li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    background-color: var(--color1);
+}
+
+.bg-color1 div li a{
+    padding: 5px 10px;
+}
+
+/* .bg-color1 div li:hover */
+.bg-color1 div li a:hover{
+    background-color: var(--color2);
+    color: var(--color);
+}
+
+.profile-nav{
+    width: 100%;;
+    padding: 10px 20px;
+}
+
+.profile-nav div{
+    display: flex;
+    gap: 10px;
+}
+
+.profile-nav div ul{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-nav div ul li{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+}
+
+.profile-nav div ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.profile-nav div ul li a:hover{
+    color: var(--color2);
+}
+
+.profile-nav div ul .active2{
+    background-color: var(--color1);
+    border-radius: 10px;
+    color: var(--color);
+}
+
+.profile-nav div ul .active2 a,
+.profile-nav div ul .active2 a:hover{
+
+    color: var(--color);
+}
+
+p.navbar-brand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+
+
+/* ============================================ */
+
+.profile-area{
+    width: 100%;
+    height: calc(100vh - 50px);
+}
+
+/* .profile-area *{
+    border: 1px dashed red;
+} */
+
+
+/* ============================================ */
+
+#profile_nav{
+    height: 80px;
+    width: 60%;
+    max-width: 100%;
+    padding: 0px 30px;
+    display: flex;
+    align-items: end;
+    position: relative;
+    margin-inline: auto;
+}
+
+#profile_nav div{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    padding-inline: 0px;
+}
+
+#profile_nav > div{
+    border-bottom: 1px solid #ababab;
+}
+
+#profile_nav > div > div{
+    width: 150px;
+    padding: 10px 10px;
+    position: relative;
+}
+
+#profile_nav div div.active{
+    color: var(--color);
+    background-color: var(--color2);
+    filter: brightness(107%);
+}
+
+#profile_nav div div.active a *{
+    color: var(--color);
+
+}
+
+#profile_nav div div a{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+#profile_nav div div a *{
+    color: #353535;
+}
+
+#profile_nav div div:hover{
+    background-color: #949494;
+    filter: brightness(150%);
+}
+
+#profile_nav div div.active:hover{
+    background-color: var(--color2);
+    filter: brightness(120%);
+}
+
+.de{
+    /* border: 1px dashed red; */
+    padding: 0 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.de button{
+    padding: 5px;
+    width: 130px;
+    outline: none;
+    background-color: var(--color);
+    border-radius: 5px;
+}
+
+.de button:first-child{
+    border: 1px solid #db5454;
+}
+
+.de button:last-child{
+    border: 1px solid #5a7ee0;
+}
+
+.de button a{
+    text-decoration: none;
+    color: #5a7ee0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.de button:first-child a{
+    color: #db5454;
+}
+
+.de button:hover a{
+    color: var(--color);
+}
+
+/* .de button:last-child:hover a{
+    color: black;
+} */
+
+.de button:hover{
+    background-color: #5a7ee0;
+}
+
+.de button:first-child:hover{
+    background-color: #db5454;
+}
+
+
+
+
+
+
+/* ============================================ */
+
+.profile-container{
+    height: 100%;
+    width: 60%;
+    max-width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* overflow-y: scroll; */
+    /* border: 1px solid black; */
+    position: relative;
+    margin-inline: auto;
+    /* border: 2px solid var(--color2); */
+
+}
+
+.profile-container::-webkit-scrollbar{
+    display: none;
+}
+
+.profile-container .profile{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    /* border: 3px solid var(--color2); */
+    /* border-radius: 10px; */
+    /* box-shadow: 2px 2px 5px #848484; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--color);
+}
+
+.profile-container .profile .block,
+.profile-container .CVform .block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.profile-container .profile .block .label,
+.profile-container .CVform .block .label{
+    font-weight: bold;
+    color: #626CCC;
+}
+
+.CVform .block .label{
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.CVform .block .label span:last-child{
+    flex: 1;
+    border-bottom: 1px solid #868686;
+}
+
+.CVform .block .label span:first-child{
+    width: 10px;
+    border-bottom: 1px solid #868686;
+}
+
+.profile-container .CVform .block{
+    font-size: 1rem;
+}
+
+.profile-container .CVform .block .label{
+    font-size: 1.5rem;
+}
+
+.profile-container .profile hr,
+.profile-container .CVform hr{
+    width: 100%;
+    height: 1px;
+    color: var(--color2);
+    padding: 0;
+    margin: 0;
+}
+
+.profile-container .CVform hr:first-child{
+    margin-top: 20px;
+}
+
+
+.profile-container .CVform{
+    max-width: 100%;
+    height: auto;
+    padding: 20px 40px;
+    /* border: 2px solid var(--color2); */
+    /* border-radius: 10px; */
+    /* box-shadow: 1px 1px 3px #848484; */
+    background-color: var(--color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blank{
+    margin-top: 100px;
+}
+
+.CVform .blockname .name{
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+.CVform .blockname .address{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.CVform .block{
+    font-size: 1rem;
+}
+
+.CVform .block .label{
+    font-size: 1.5rem;
+}
+
+.CVform .block .degree{
+    margin-bottom: 20px;
+}
+
+.CVform .block .degree .name{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.CVform .block .degree .school_organization{
+    padding: 0 5px;
+    border-left: 1px solid black;
+}
+
+.CVform .block .degree .time{
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.CVform .block .degree .phone svg,
+.CVform .block .degree .email svg{
+    margin-right: 5px;
+}
+
+.CVform .block .degree .phone,
+.CVform .block .degree .email{
+    margin: 5px 0;
+}
+
+.profile-container .noCV{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    background-color: var(--color);
+}
+
+.profile-container .noCV p{
+    /* font-style: italic; */
+    color: #949494;
+}
+
+.profile-container .noCV button{
+    background-color: var(--color2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 3px #848484;
+}
+
+.profile-container .noCV button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.profile-container .noCV button:hover{
+    filter: brightness(120%);
+}
+
+
+
+
+/* ======================================== */
+
+@media (width <= 700px) {
+    .profile-container{
+        width: 100%;
+        padding: 20px 0px;
+    }
+    .profile-container .CVform{
+        padding-inline: 30px;
+    }
+    #profile_nav{
+        width: 100%;
+        padding: 0;
+    }
+
+}
