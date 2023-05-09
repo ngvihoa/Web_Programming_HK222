@@ -15,7 +15,7 @@
             <div class="container-fluid mx-4">
                 <a class="navbar-logo p-1 ms-3" href="<?php echo ROOT ?>/home">
                     <img
-                    src="<?php echo ROOT ?>/assets/images/logo_white.png"
+                    src="<?php echo ROOT ?>/assets/images/logo_green.png"
                     style="width:80px;height:60px;"
                     />
                 </a>
@@ -64,9 +64,6 @@
                             echo "<p class='myhello justify-content-between'>Hello, username</p>" ;
                         }
                         ?>
-                    <a href="<?php echo ROOT ?>/search" class="btn">
-                        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="20" height="20">
-                    </a>
                 </div>
             </div>
         </nav>
