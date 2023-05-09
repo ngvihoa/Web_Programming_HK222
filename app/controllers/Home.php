@@ -6,7 +6,7 @@ class Home
 
     public function index()
     {
-        show("Index function");
+        // show("Index function");
         $this->view('home');
     }
 

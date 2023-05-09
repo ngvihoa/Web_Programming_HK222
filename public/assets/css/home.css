@@ -1,0 +1,155 @@
+.home {
+  /* display: flex; */
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+}
+
+.home .container {
+  padding-top: 70px;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+.home .row {
+  margin: 50px auto;
+  display: flex;
+}
+.home h1 {
+  margin: 10px auto;
+  font-weight: 700;
+  line-height: 56px;
+  color: #ffffff;
+  text-shadow: 2px 0 var(--color1), -2px 0 var(--color1), 0 2px var(--color1), 0 -2px var(--color1),
+    1px 1px var(--color1), -1px -1px var(--color1), 1px -1px var(--color1), -1px 1px var(--color1);
+  letter-spacing: 3px;
+}
+.home h3 {
+  margin: 0 auto;
+  color: black;
+  opacity: 0.7;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.home h5 {
+  margin: 0 auto;
+  color: gray;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+.home .btn-create {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 28px;
+  border-radius: 10px;
+  margin: 30px auto;
+  color: #fff;
+  background: var(--color2);
+  text-decoration: none;
+}
+
+.home .btn-create:hover {
+  filter: brightness(110%);
+}
+.home .home-img {
+  /* margin-left: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .home-img img{
+  box-shadow: 2px 2px 5px #bebebe;
+}
+
+.home .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 1000px) {
+  .home .animated {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2rem;
+    line-height: 36px;
+  }
+  .home h3 {
+    font-size: 1.3rem;
+    line-height: 25px;
+  }
+  .home h5 {
+    font-size: 1.1rem;
+    line-height: 14px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .home .btn-create {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.home .btn {
+  background-color: var(--color2);
+  color: white;
+}
+/* 3 cards */
+.home h4 {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.home .mycard {
+  /* margin-right: 5%; */
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  min-width: 180px;
+  max-width: 360px;
+  /* border: 1px solid red; */
+  padding: 20px;
+  box-shadow: 0px 2px 5px #bebebe;
+
+}
+
+.mycard *{
+  /* border: 1px solid red */
+}
+
+.home .mycard img {
+  display: block;
+  margin: 10px auto;
+}
+.home p {
+  text-align: justify;
+  color: gray;
+  margin: 10px auto;
+
+}
+
+.bound{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.block{
+    min-height: 150px;
+    margin: -10px auto 0 auto;
+}
