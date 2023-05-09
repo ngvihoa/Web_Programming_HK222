@@ -1,57 +1,164 @@
-section.mynav {
-  font-size: 16px;
-  box-sizing: border-box;
-  margin: 0;
-  overflow-x: hidden;
-  top: 0;
-  left: 0;
-}
-nav {
+
+
+nav.navbar {
   background-color: #2dc46a;
 }
-.navbar-logo img {
-  width: 55px;
-  height: 55px;
+
+.navbound{
+  height: 80px;
+  padding: 0 20px;
 }
+
+.navbar-brand{
+  width: 200px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 200px;
+  height: 150px;
+}
+
 nav .nav-item {
-  padding: 0 40px;
+  padding: 5px 10px;
+  /* font-weight: bold; */
 }
-nav .nav-item:hover {
+
+/* nav .nav-item:hover {
   background-color: #626ccc;
   font-weight: bold;
-}
+} */
+
 nav .myhello {
-  padding: 0 40px;
-  color: #ffffff;
+  width: 150px;
+  color: var(--color);
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  gap: 10px;
+  padding: 10px 0;
+  /* font-weight: bold; */
+  text-decoration: none;
 }
+
+nav .myhello a{
+  text-decoration: none;
+  padding: 10px 20px;
+  color: var(--color);
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+nav .myhello a:hover{
+  background-color: var(--color2);
+}
+
 .nav-item .nav-link {
-  color: #ffffff;
+  color: var(--color);
 }
+
 .navbar-toggler {
   border: none;
   padding: 10px 6px;
   outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
+.navbar-toggler:focus{
+  box-shadow: 0 0 0 0;
+}
+
+
 .navbar-toggler span {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: #fff;
+  background-color: var(--color);
 }
 .navbar-toggler span + span {
   margin-top: 4px;
   width: 18px;
+  height: 2px;
   margin-left: 4px;
 }
 .navbar-toggler span + span + span {
   width: 10px;
+  height: 2px;
   margin-left: 10px;
 }
-.mynav .btn {
+
+/* .btn {
   background-color: #f7f7f7;
   border-radius: 50px;
   margin: 0 40px;
 }
-.mynav .btn:hover {
+.btn:hover {
   box-shadow: 15px 1px #626ccc;
+} */
+
+/* #navbarSupportedContent{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: right;
+
+} */
+
+#navbarSupportedContent{
+  /* border: 1px solid black; */
+  background-color: var(--color1);
+}
+
+#navbarSupportedContent ul{
+  display: flex;
+  gap: 10px;
+  /* align-items: center; */
+  background-color: var(--color1);
+  /* justify-content: flex-start; */
+  padding: 5px 10px;
+}
+
+#navbarSupportedContent ul li{
+  width: 100%;
+}
+
+#navbarSupportedContent ul li a{
+  position: relative;
+}
+
+
+#navbarSupportedContent ul li a::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--color2);
+  transition: 0.3s ease;
+}
+
+
+#navbarSupportedContent ul li a:hover::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color2);
+  transition: 0.3s ease;
 }

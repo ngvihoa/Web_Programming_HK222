@@ -1,72 +1,51 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/navbar.css">
-    <title>NavBar</title>
-    
-</head>
-<body>
-    <section class="mynav">
-        <nav class="navbar navbar-expand-lg header-nav fixed-top">
-            <div class="container-fluid mx-4">
-                <a class="navbar-logo p-1 ms-3" href="<?php echo ROOT ?>/home">
-                    <img
-                    src="<?php echo ROOT ?>/assets/images/logo_green.png"
-                    style="width:80px;height:60px;"
-                    />
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid navbound">
+                <a class="navbar-brand" href="<?php echo ROOT ?>/home">
+                    <img src="<?php echo ROOT ?>/assets/images/logo_green.png">
                 </a>
-            
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <div
-                    class="collapse navbar-collapse justify-content-between"
+                    class="collapse navbar-collapse"
                     id="navbarSupportedContent"
                 >
-                    <ul class="navbar-nav mx-auto mb-0 mb-lg-0">
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="">ABOUT</a>
-                        </li> -->
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT ?>/home">HOME</a>
+                            <a class="nav-link" href="<?php echo ROOT ?>/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT ?>/contact">CONTACT</a>
+                            <a class="nav-link" href="<?php echo ROOT ?>/search">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo ROOT ?>/contact">Contact</a>
                         </li>
                         <li class="nav-item" >
                             <?php 
-                            if (!isset($user)) { 
-                                echo "<a class='nav-link'href='<?php echo ROOT ?>/login'>LOGIN</a>" ;
-                            }
-                            else{
-                                echo "<a class='nav-link' href='<?php echo ROOT ?>/login'>LOGOUT</a>" ;
+                            $tmp = 'login';
+                            $tmp2 = 'Login';
+                            if (isset($user)) { 
+                                $tmp = 'logout';
+                                $tmp2 = 'Logout';
                             }
                             ?>
+                            <a class='nav-link'href='<?php echo ROOT.'/'.$tmp; ?>'><?php echo $tmp2; ?></a>
                         </li>
-                        </div>
                     </ul>
+                    <div class='myhello'>
                     <?php 
-                        if (isset($user)) { 
-                            echo "<p class='myhello justify-content-between'>Hello, username</p>" ;
-                        }
-                        ?>
+                            if (isset($user)) { 
+                    echo "<a href='<?php echo ROOT ?>/profile'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='currentColor' class='bi bi-person-circle' viewBox='0 0 16 16'>
+                        <path d='M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z'/>
+                        <path fill-rule='evenodd' d='M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z'/>
+                        </svg>".$user."</a>";
+                            }
+                    ?>
+                    </div>
                 </div>
             </div>
         </nav>
-    </section>
-</body>
-</html>

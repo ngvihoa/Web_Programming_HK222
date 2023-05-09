@@ -9,13 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/profile.css">
 
     <title>User Profile</title>
 </head>
 <body>
     <!-- example navbar -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-color1">
+    <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-color1">
         <div class="container-fluid d-flex justify-content-between">
             <p class="navbar-brand">WebSiteName</p>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -31,7 +32,8 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
+    <?php include 'navbar.php'; ?>
 
     <div class="space"></div>
 

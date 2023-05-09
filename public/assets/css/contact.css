@@ -2,13 +2,16 @@
   min-height: 90vh;
   width: 100%;
   background: #ffffff;
-  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.mycontact *{
+  /* border: 1px dashed red; */
 }
 
 .mycontact .container {
   padding-top: 70px;
-  margin-right: 7%;
-  margin-left: 7%;
+  height: 100%;
 }
 
 .mycontact h1 {
@@ -24,12 +27,16 @@
 .mycontact .card-deck {
   margin: 10px auto;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .mycontact .myinfo {
   background-color: #626ccc;
-  border-radius: 20px;
+  border-radius: 10px;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -38,6 +45,24 @@
 }
 
 .mycontact .card {
-  margin-right: 50px;
-  width: 22rem;
+  width: 30%;
+  height: 300px;
+  box-shadow: 0 2px 5px #d3d3d3;
+}
+
+
+
+@media (width < 1000px) {
+  .mycontact .card-deck {
+    flex-direction: column;
+  }
+
+  .mycontact .card {
+    width: 80%;
+  }
+
+  .pricing-header{
+    margin-top: 50px;
+  }
+  
 }

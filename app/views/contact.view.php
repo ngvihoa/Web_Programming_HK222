@@ -8,8 +8,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/footer.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
+
     <title>ContactPage</title>
 </head>
 <body>
@@ -20,8 +23,8 @@
                 <h1 class="display-4">Contact us</h1>
                 <p class="lead">Our users are very satisfied about our excellent support.</p>
             </div>
-            <div class="card-deck mb-3 text-center">
-                <div class="card mb-4 box-shadow">
+            <div class="card-deck text-center">
+                <div class="card box-shadow">
                     <div class="card-header">
                         <img src="https://cdn-icons-png.flaticon.com/512/1177/1177437.png" width="70" height="70">
                     </div>
@@ -31,7 +34,7 @@
                         <p class="myinfo">cvblog@gmail.com</p>
                     </div>
                 </div>
-                <div class="card mb-4 box-shadow">
+                <div class="card box-shadow">
                     <div class="card-header">
                     <img src="https://cdn-icons-png.flaticon.com/512/3178/3178284.png" width="70" height="70">
                     </div>
@@ -45,5 +48,9 @@
         </div>
     </section>
     <?php include 'footer.php'; ?>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

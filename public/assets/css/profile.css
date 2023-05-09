@@ -22,117 +22,22 @@ body{
 
 /* ================================ */
 
-nav.bg-color1{
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-}
-
 .space{
-    height: 50px;
+    height: 100px;
     width: 100%;
-    background-color: #2DC46A;
+    /* background-color: #2DC46A; */
 }
-/* 
-#collapsibleNavbar{
-    margin: 10px 0 0 0;
-}
-
-.container-fluid{
-    padding: 0;
-} */
-
-.bg-color1{
-    background-color: var(--color1);
-}
-
-.bg-color1 div{
-    color: var(--color);
-    width: 100%;
-}
-
-.bg-color1 div a{
-    color: var(--color);
-    background-color: var(--color1);
-}
-
-.bg-color1 div li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* width: 100%; */
-    background-color: var(--color1);
-}
-
-.bg-color1 div li a{
-    padding: 5px 10px;
-}
-
-/* .bg-color1 div li:hover */
-.bg-color1 div li a:hover{
-    background-color: var(--color2);
-    color: var(--color);
-}
-
-.profile-nav{
-    width: 100%;;
-    padding: 10px 20px;
-}
-
-.profile-nav div{
-    display: flex;
-    gap: 10px;
-}
-
-.profile-nav div ul{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.profile-nav div ul li{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 15px;
-}
-
-.profile-nav div ul li a{
-    text-decoration: none;
-    color: black;
-}
-
-.profile-nav div ul li a:hover{
-    color: var(--color2);
-}
-
-.profile-nav div ul .active2{
-    background-color: var(--color1);
-    border-radius: 10px;
-    color: var(--color);
-}
-
-.profile-nav div ul .active2 a,
-.profile-nav div ul .active2 a:hover{
-
-    color: var(--color);
-}
-
-p.navbar-brand{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-}
-
 
 
 /* ============================================ */
 
 .profile-area{
-    width: 100%;
-    height: calc(100vh - 50px);
+    padding: 0 40px;
+    margin: auto;
+    width: 50%;
+    /* height: calc(100vh - 50px); */
+    background-color: var(--color);
+    margin-top: 10px;
 }
 
 /* .profile-area *{
@@ -144,13 +49,13 @@ p.navbar-brand{
 
 #profile_nav{
     height: 80px;
-    width: 60%;
+    width: 100%;
     max-width: 100%;
-    padding: 0px 30px;
     display: flex;
     align-items: end;
     position: relative;
     margin-inline: auto;
+    /* border: 1px solid black; */
 }
 
 #profile_nav div{
@@ -206,9 +111,9 @@ p.navbar-brand{
 
 .de{
     /* border: 1px dashed red; */
-    padding: 0 10px;
     display: flex;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .de button{
@@ -256,25 +161,20 @@ p.navbar-brand{
     background-color: #db5454;
 }
 
-
-
-
-
-
 /* ============================================ */
 
 .profile-container{
-    height: 100%;
-    width: 60%;
+    height: auto;
+    width: 100%;
     max-width: 100%;
-    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     /* overflow-y: scroll; */
-    /* border: 1px solid black; */
+    /* border: 1px solid #bcbcbc; */
     position: relative;
     margin-inline: auto;
+    /* margin-top: 20px; */
     /* border: 2px solid var(--color2); */
 
 }
@@ -353,7 +253,7 @@ p.navbar-brand{
 .profile-container .CVform{
     max-width: 100%;
     height: auto;
-    padding: 20px 40px;
+    padding: 20px 0px;
     /* border: 2px solid var(--color2); */
     /* border-radius: 10px; */
     /* box-shadow: 1px 1px 3px #848484; */
@@ -364,7 +264,7 @@ p.navbar-brand{
 }
 
 .blank{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .CVform .blockname .name{
@@ -454,13 +354,12 @@ p.navbar-brand{
 /* ======================================== */
 
 @media (width <= 700px) {
-    .profile-container{
+
+    .profile-area{
         width: 100%;
-        padding: 20px 0px;
+        padding: 0 20px;
     }
-    .profile-container .CVform{
-        padding-inline: 30px;
-    }
+
     #profile_nav{
         width: 100%;
         padding: 0;

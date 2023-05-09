@@ -6,6 +6,8 @@ class Profile
 
     public function index()
     {
+        $data['user'] = "Adam";
+
         $data['p'] = 'profile_user';
         $data['active_CV'] = '';
         $data['active_User'] = 'active';
@@ -14,6 +16,9 @@ class Profile
     }
 
     public function profile_cv(){
+
+        $data['user'] = "Adam";
+
 
         $data['p'] = 'profile_cv';
         $data['active_CV'] = 'active';
@@ -27,6 +32,8 @@ class Profile
 
     public function profile_user(){
 
+        $data['user'] = "Adam";
+
         $data['p'] = 'profile_user';
         $data['active_CV'] = '';
         $data['active_User'] = 'active';
@@ -34,6 +41,7 @@ class Profile
     }
 
     public function delete_cv(){
+        $data['user'] = "Adam";
 
         $data['p'] = 'profile_cv';
         $data['active_CV'] = 'active';

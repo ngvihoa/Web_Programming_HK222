@@ -6,10 +6,8 @@ class Contact
 
     public function index()
     {
-        // show("Index function");
-        $this->view('contact');
+        $data['user'] = 'Adam';
+        $this->view('contact', $data);
     }
-
-
 }
 

@@ -7,3 +7,45 @@ section.myfooter {
 .myfooter .nav-item:hover {
   text-decoration: underline;
 }
+
+.footer-under {
+  margin: 0;
+  gap: 20px;
+}
+
+.copyright{
+  width: 100%;
+  margin-left: 10px;
+}
+
+.copyright-bound{
+  min-width: 300px;
+}
+
+.footer-under ul{
+  min-width: 300px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-under ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (width <= 576px) {
+}
+
+@media (width <= 1000px) {
+    .copyright-bound{
+      max-width: 280px;
+    }
+
+  .footer-under ul{
+    width: 300px;
+    justify-content: center;
+  }
+}

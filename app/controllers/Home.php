@@ -6,8 +6,10 @@ class Home
 
     public function index()
     {
-        // show("Index function");
-        $this->view('home');
+        // check cookies,...
+        $data['user'] = "Adam";
+
+        $this->view('home', $data);
     }
 
 

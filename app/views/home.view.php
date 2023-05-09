@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="<?php echo ROOT ?>/assets/images/logo_green.png">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/home.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
 
     <title>HomePage</title>
@@ -29,7 +31,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 home-img" >
-                    <img class="img-fluid animated" src="https://www.cvmaker.com/assets/images/cvs/3/cv-example-standford-424954.jpg" style="width:29rem;height:35rem;">
+                    <img class="img-fluid animated" loading='lazy' src="https://www.cvmaker.com/assets/images/cvs/3/cv-example-standford-424954.jpg" style="width:29rem;height:35rem;">
                 </div>
             </div>
             <hr>
@@ -58,6 +60,12 @@
             </div>
         </div>
     </section>
+
+
     <?php include 'footer.php'; ?>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
