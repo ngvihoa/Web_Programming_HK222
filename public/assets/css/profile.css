@@ -34,10 +34,11 @@ body{
 .profile-area{
     padding: 0 40px;
     margin: auto;
-    width: 50%;
+    width: 60%;
     /* height: calc(100vh - 50px); */
     background-color: var(--color);
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 /* .profile-area *{
@@ -264,7 +265,7 @@ body{
 }
 
 .blank{
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .CVform .blockname .name{

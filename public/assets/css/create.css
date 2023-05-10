@@ -281,6 +281,14 @@ button[name="delete-ref-button"]:hover{
 #cancel a{
     font-size: 1.5rem;
     color: #ababab;
+    text-decoration: none;
+    font-style: normal;
+}
+
+#cancel a:hover{
+    font-size: 1.5rem;
+    color: #8b8b8b;
+    text-decoration: underline;
 }
 
 .show{

@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
 
-    <title>HomePage</title>
+    <title>CVblog.com</title>
 </head>
 <body>
     <?php include 'navbar.php'; ?>

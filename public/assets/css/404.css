@@ -1,0 +1,13 @@
+.boundary404{
+    width: 100%;
+    height: 70vh;
+    padding: 200px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boundary404 div{
+    font-size: 1.5rem;
+    color: #7a7a7a;
+}

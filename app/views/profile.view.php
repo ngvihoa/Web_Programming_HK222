@@ -10,9 +10,10 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/footer.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/profile.css">
 
-    <title>User Profile</title>
+    <title>CVblog.com</title>
 </head>
 <body>
     <!-- example navbar -->
@@ -66,6 +67,10 @@
             include ''.$tmp.'.view.php';
         ?>
     </section>
+
+    <?php
+        include 'footer.php';
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

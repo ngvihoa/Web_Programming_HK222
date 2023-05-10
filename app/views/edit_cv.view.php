@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/x-icon" href="<?php echo ROOT ?>/assets/images/logo_green.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/root.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ROOT ?>/assets/css/create.css">
 
-    <title>CVblog.com</title>
+    <title>Edit CV</title>
 </head>
 <body>
 
@@ -56,7 +57,7 @@
         <!-- Job Title -->
         <div class="block-boundary">
             <h5><strong>Job Title</strong></h5>
-            <div class="block-boundary-content  ">
+            <div class="block-boundary-content show">
                 <hr>
                 <div class="block">
                     <div class="sub-block">
@@ -69,7 +70,7 @@
         <!-- Work experiences -->
         <div class="block-boundary">
             <h5><strong>Work experiences</strong></h5>
-            <div class="block-boundary-content we" id="workexp0">
+            <div class="block-boundary-content we show" id="workexp0">
                 <hr>
                 <div class="block">
                     <div class="sub-block">
@@ -116,7 +117,7 @@
         <!-- Education -->
         <div class="block-boundary">
             <h5><strong>Education</strong></h5>
-            <div class="block-boundary-content ed" id="education0">
+            <div class="block-boundary-content ed show" id="education0">
                 <hr>
                 <div class="block">
                     <div class="sub-block">
@@ -153,7 +154,7 @@
         <!-- Certificates -->
         <div class="block-boundary">
             <h5><strong>Certificates</strong></h5>
-            <div class="block-boundary-content ce" id="certificate0">
+            <div class="block-boundary-content ce show" id="certificate0">
                 <hr>
                 <div class="block">
                     <div class="sub-block">
@@ -190,7 +191,7 @@
         <!-- Hobbies -->
         <div class="block-boundary">
             <h5><strong>Interests (optional)</strong></h5>
-            <div class="block-boundary-content  ">
+            <div class="block-boundary-content show">
                 <hr>
                 <div class="block">
                     <div class="sub-block">
@@ -203,7 +204,7 @@
         <!-- References -->
         <div class="block-boundary">
             <h5><strong>References</strong></h5>
-            <div class="block-boundary-content ref" id="references0">
+            <div class="block-boundary-content ref show" id="references0">
                 <hr>
                 <div class="block">
                     <div class="sub-block">

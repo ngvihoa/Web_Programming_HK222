@@ -6,10 +6,14 @@ class Search
 
     public function index()
     {
-        // $data['user'] = "Adam";
+        $data['user'] = "Adam";
 
-        $this->view('search');
+        $data['error_no_found'] = false;
+
+        $this->view('search', $data);
     }
+
+
 
 
 }

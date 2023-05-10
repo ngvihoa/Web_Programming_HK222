@@ -16,7 +16,7 @@ class Create_cv
 
     public function edit_cv()
     {
-        $this->view('create_cv');
+        $this->view('edit_cv');
     }
 
 

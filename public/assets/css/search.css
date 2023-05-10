@@ -1,0 +1,293 @@
+body {
+  background-color: var(--color3);
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+.space {
+  height: 100px;
+  width: 100%;
+  /* background-color: #2DC46A; */
+}
+
+.space2 {
+  height: 60px;
+  width: 100%;
+  /* background-color: #2DC46A; */
+}
+
+.central-frame {
+  width: 50%;
+  /* padding-top: 10%; */
+  border: black;
+  margin: 20px auto 0 auto;
+  background-color: var(--color);
+  padding: 40px;
+  /* border: 1px dashed red; */
+  padding-bottom: 0px;
+}
+
+.central-frame hr {
+  margin-top: 50px;
+}
+
+#central-frame {
+  width: 100%;
+  height: auto;
+  /* border: 1px soli; */
+}
+
+#central-frame form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#search-input:focus {
+  outline-color: var(--color1);
+}
+
+#search-button {
+  padding: 10px;
+  background-color: var(--color1);
+  border: none;
+  color: var(--color);
+  border-radius: 5px;
+  cursor: pointer;
+  /* font-size: 1rem; */
+}
+
+#search-button:hover {
+  filter: brightness(110%);
+}
+
+.filter-dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-dropdown {
+  min-width: 160px;
+}
+
+
+.search-dropdown select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* ==================================== */
+
+.cvFrame {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  background-color: var(--color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+#cvList {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+#cvDetail {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #000000; */
+  /* box-shadow: 2px 2px 5px #848484; */
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+  gap: 20px;
+  max-height: 280px;
+}
+
+#cvDetail *{
+  /* border: 1px dashed red; */
+}
+
+#cvDetail a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+#cvDetail img {
+  /* margin-right: 10px; */
+  max-width: 120px;
+  height: 100%;
+  /* adjust the width as needed */
+  /* height: 150px; */
+  /* adjust the height as needed */
+}
+
+#cvDetail span {
+    width: 100%;
+    display: block;
+}
+
+.secondColumn {
+  /* padding: 10%; */
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.secondColumn div:first-child{
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.secondColumn div:nth-child(2){
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.secondColumn div:last-child{
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+}
+
+.country {
+  /* padding-left: 30%; */
+  width: 100%;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  }
+
+.pagination a.S_active {
+  background-color: var(--color1);
+  color: white;
+  border: 1px solid var(--color1);
+}
+
+.pagination a.S_active:hover{
+  filter: brightness(110%);
+}
+
+.pagination a:hover:not(.S_active) {
+  background-color: #ddd;
+}
+
+.no-find{
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ccc;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.no-find svg{
+  width: 60px;
+  color: #a0a0a0;
+}
+
+.no-find h1{
+  font-size: 1.1rem;
+  color: #5d5d5d;
+  font-weight: 600;
+}
+
+.no-find p{
+  color: #a0a0a0;
+margin-top: -15px;
+}
+
+@media (width <= 1000px) {
+  .central-frame,
+  .cvFrame{
+    width: 100%;
+    padding-inline: 20px;
+  }
+  #cvDetail img {
+    max-width: 80px;
+    height: 100%;
+  }
+  .secondColumn div:first-child{
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+  }
+  
+  .secondColumn div:nth-child(2){
+    margin: 5px 0;
+    font-size: 0.8rem;
+  }
+
+  .secondColumn div:last-child{
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+
+  .pagination a{
+    font-size: 0.8rem;
+  }
+
+  .search-container,
+  .filter-dropdown{
+    font-size: 0.8rem;
+  }
+}
