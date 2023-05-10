@@ -4,18 +4,19 @@ defined('ROOTPATH') OR exit('Access Denied!');
 
 /** check which php extensions are required **/
 check_extensions();
+
 function check_extensions()
 {
 
 	$required_extensions = [
 
-		'gd',
+		// 'gd',
+		// 'intl',
 		'mysqli',
 		'pdo_mysql',
 		'pdo_sqlite',
 		'curl',
 		'fileinfo',
-		'intl',
 		'exif',
 		'mbstring',
 	];
