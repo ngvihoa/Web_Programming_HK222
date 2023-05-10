@@ -1,28 +1,33 @@
-<?php
+<?php 
 
-if($_SERVER['SERVER_NAME'] == 'localhost'){
-    /** database config */
-    define('DBNAME', 'my_db'); // change database name
-    define('DBHOST', 'localhost:3311'); // change port
-    define('DBUSER', 'root');
-    define('DBPASS', '');
+defined('ROOTPATH') OR exit('Access Denied!');
 
-    define('ROOT', 'http://localhost/CVblog/public');
+if((empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli') || (!empty($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] == 'localhost'))
+{
+	/** database config **/
+	define('DBNAME', 'cvwebsite');
+	define('DBHOST', 'localhost:3311');
+	define('DBUSER', 'admin');
+	define('DBPASS', 'password');
+	define('DBDRIVER', '');
+	
+	define('ROOT', 'http://localhost/CVblog/public');
+
+}else
+{
+	/** database config **/
+	define('DBNAME', 'mvc_db');
+	define('DBHOST', 'localhost');
+	define('DBUSER', 'root');
+	define('DBPASS', '');
+	define('DBDRIVER', '');
+
+	define('ROOT', 'https://www.yourwebsite.com');
+
 }
-else{
-    define('DBNAME', 'my_db');
-    define('DBHOST', 'localhost');
-    define('DBUSER', 'root');
-    define('DBPASS', '');
 
-    define('ROOT', 'http://www.yourwebsite.com');
-}
+define('APP_NAME', "My Webiste");
+define('APP_DESC', "Best website on the planet");
 
-define('APP_NAME', "My Website");
-define('APP_DESC', "Best Website I've ever had");
-
-/*true means show errors*/
+/** true means show errors **/
 define('DEBUG', true);
-
-
-?>
