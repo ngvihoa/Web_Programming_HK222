@@ -1,8 +1,12 @@
 <?php
 
+namespace Controller;
+
+defined('ROOTPATH') OR exit('Access Denied!');
+
 class Create_cv
 {
-    use Controller;
+    use MainController;
 
     public function index()
     {

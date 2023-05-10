@@ -19,7 +19,7 @@ class Request
 	}
 
 	/** check if something was posted **/
-	public function posted():bool
+	public function posted():bool          // trả về true false if request là post hay ko
 	{
 		if($_SERVER['REQUEST_METHOD'] == "POST" && count($_POST) > 0)
 		{

@@ -10,6 +10,11 @@ class _404
 	
 	public function index()
 	{
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
+
 		$this->view('404');
 	}
 }

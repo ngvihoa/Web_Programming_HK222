@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <form class="form" id="login" method="post">
+    <form class="form" id="login" method="post" autocomplete>
         <h1 id="title">Login</h1>
 
     <input value="<?=old_value('username')?>" name="username" placeHolder="*Username"id="Username" class="TextField form-control">

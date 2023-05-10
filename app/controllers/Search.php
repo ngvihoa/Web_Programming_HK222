@@ -1,12 +1,18 @@
 <?php
+namespace Controller;
 
+defined('ROOTPATH') OR exit('Access Denied!');
 class Search
 {
-    use Controller;
+    use MainController;
 
     public function index()
     {
-        $data['user'] = "Adam";
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
+
 
         $data['error_no_found'] = false;
 

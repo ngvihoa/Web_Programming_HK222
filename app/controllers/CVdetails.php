@@ -1,12 +1,19 @@
 <?php
 
+namespace Controller;
+
+defined('ROOTPATH') OR exit('Access Denied!');
+
 class CVdetails
 {
-    use Controller;
+    use MainController;
 
     public function index($cvId)
     {
-        // $data['user'] = "Adam";
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
 
         $data['cvId'] = $cvId;
 
