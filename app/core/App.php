@@ -1,50 +1,53 @@
-
-<!-- App file -->
 <?php
+
+defined('ROOTPATH') OR exit('Access Denied!');
 
 class App
 {
-    private $controller = 'Home';
-    private $method     = 'index';
-    private function splitURL()
-    {
-        $URL = $_GET['url'] ?? 'home';
-        $URL = explode('/', trim($URL, '/'));
-        return $URL;
-    }
-    
-    public function loadController()
-    {
-        $URL = $this->splitURL();
-    
-        $filename = "../app/controllers/".ucfirst($URL[0]).".php";
+	private $controller = 'Home';
+	private $method 	= 'index';
 
-        /*select controller */
-        if(file_exists($filename)){
-            require $filename;
-            $this->controller = ucfirst($URL[0]);
-            unset($URL[0]);
-        }
-        else{
-            $filename = "../app/controllers/_404.php";
-            require $filename;
-            $this->controller = "_404";
-        }
+	private function splitURL()
+	{
+		$URL = $_GET['url'] ?? 'home';
+		$URL = explode("/", trim($URL,"/"));
+		return $URL;	
+	}
 
-        $controller = new $this->controller;
+	public function loadController()
+	{
+		$URL = $this->splitURL();
 
-        /*select method of controller */
-        if(!empty($URL[1])){
+		/** select controller **/
+		$filename = "../app/controllers/".ucfirst($URL[0]).".php";
+		if(file_exists($filename))
+		{
+			require $filename;
+			$this->controller = ucfirst($URL[0]);
+			unset($URL[0]);
+		}else{
 
-            if(method_exists($controller, $URL[1])){
-                $this->method = $URL[1];
-                unset($URL[1]);
-            }
+			$filename = "../app/controllers/_404.php";
+			require $filename;
+			$this->controller = "_404";
+		}
 
-        }
+		$controller = new ('\Controller\\'.$this->controller);
 
-        call_user_func_array([$controller, $this->method], $URL);
-    }
+		/** select method **/
+		if(!empty($URL[1]))
+		{
+			if(method_exists($controller, $URL[1]))
+			{
+				$this->method = $URL[1];
+				unset($URL[1]);
+			}	
+		}
+
+		call_user_func_array([$controller,$this->method], $URL);
+
+	}	
+
 }
 
-?>
+
