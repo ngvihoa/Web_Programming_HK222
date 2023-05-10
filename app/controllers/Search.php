@@ -1,8 +1,12 @@
 <?php
 
+namespace Controller;
+
+defined('ROOTPATH') OR exit('Access Denied!');
+
 class Search
 {
-    use Controller;
+    use MainController;
 
     public function index()
     {

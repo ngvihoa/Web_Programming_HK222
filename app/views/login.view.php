@@ -28,8 +28,7 @@
     
         <input type="submit" name="login_submit" value="Login" id="login-btn" />
         <div id="notMember">Not a member? <a href="<?=ROOT ?>/signup" id="signup-link">Sign up</a></div>
-        <div id="backtoHome"><a href="<?=ROOT ?>/home" id="home-link">Home</a></div>
-
+        <input id="back-to-home" onclick="location.href='./home';" value="Home">
         <div class="bottom-icon">
             <button class="social-signin facebook" type="button">
                 <ion-icon name="logo-facebook" size="small"></ion-icon>

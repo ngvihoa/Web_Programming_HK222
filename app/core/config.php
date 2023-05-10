@@ -6,20 +6,20 @@ if((empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli') || (!empty($_SER
 {
 	/** database config **/
 	define('DBNAME', 'cvwebsite');
-	define('DBHOST', 'localhost:3311');
+	define('DBHOST', 'localhost');
 	define('DBUSER', 'admin');
 	define('DBPASS', 'password');
 	define('DBDRIVER', '');
 	
-	define('ROOT', 'http://localhost/CVblog/public');
+	define('ROOT', 'http://localhost/Web_Programming_HK222/public');
 
 }else
 {
 	/** database config **/
-	define('DBNAME', 'mvc_db');
+	define('DBNAME', 'vcwebsite');
 	define('DBHOST', 'localhost');
-	define('DBUSER', 'root');
-	define('DBPASS', '');
+	define('DBUSER', 'admin');
+	define('DBPASS', 'password');
 	define('DBDRIVER', '');
 
 	define('ROOT', 'https://www.yourwebsite.com');

@@ -11,7 +11,7 @@ function check_extensions()
 	$required_extensions = [
 
 		// 'gd',
-		// 'intl',
+		'intl',
 		'mysqli',
 		'pdo_mysql',
 		'pdo_sqlite',
