@@ -14,6 +14,8 @@ class User
 
 	protected $table = 'users';
 	protected $primaryKey = 'id';
+	protected $order_column = 'userID';
+
 	protected $loginUniqueColumn = 'username';
 
 	protected $allowedColumns = [

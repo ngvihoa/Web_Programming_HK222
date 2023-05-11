@@ -123,15 +123,13 @@ body{
     outline: none;
     background-color: var(--color);
     border-radius: 5px;
+    border: 1px solid #5a7ee0;
 }
 
 .de button:first-child{
     border: 1px solid #db5454;
 }
 
-.de button:last-child{
-    border: 1px solid #5a7ee0;
-}
 
 .de button a{
     text-decoration: none;

@@ -2,88 +2,73 @@
             margin: 0;
             padding: 0;
             border: 0;
+            box-sizing: border-box;
+
         }
         
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+        /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500); */
         *:focus {
             outline: none;
         }
         
          :root {
-            --finalFont: 'Roboto', sans-serif;
+            /* --finalFont: 'Roboto', sans-serif; */
             --round: 10px;
             --backgroundColor: linear-gradient(120deg, #cbe9c8, #2DC46A);
         }
         
         body {
             background: var(--backgroundColor);
-            font-size: 16px;
             color: #222;
-            font-family: var(--finalFont);
+            /* font-family: var(--finalFont); */
             font-weight: 300;
             height: 100vh;
             overflow: hidden;
+            display: flex;
+    align-items: center;
+    justify-content: center;
         }
         
         .form {
+            /* height: var(--height); */
             position: relative;
-            margin: 50px auto;
-            width: 300px;
-            min-height: 100px;
-            box-sizing: border-box;
-            padding: 20px 30px;
-            align-self: center;
-            background: #dbd8d8;
-            border-radius: var(--round);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            margin: auto;
+            min-width: 40%;
+            min-height: 40%;
+            padding: 20px 40px;
+            background: var(--color3);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px #00000066;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: space-between;
+            gap: 10px;
         }
-        
+
+        .form h1{
+            text-align: center;
+        }
+
+        .form label{
+            font-weight: 500;;
+        }
+
         .form-message {
-            margin-left: 24%;
-            font-size: 14px;
+            text-align: left;
             color: #f33a58;
+            margin-top: 4px;
+            font-size: 0.9rem;
         }
         
         .form-message.success {
             margin-left: 20%;
             font-size: 14px;
-            color: #1dbfaf;
-        }
-        
-        .input-field {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            height: 240px;
-            width: 100%;
-        }
-        
-        .input-field h4 {
-            padding-top: 12px;
-            text-align: center;
-        }
-        
-        .input-field .form-group {
-            display: flex;
-            margin-bottom: 10px;
-            flex-direction: column;
-            border-color: #1dbfaf;
-            margin-bottom: 10px;
+            color: var(--color1);
         }
         
         .form-control:hover {
-            border-color: #1dbfaf;
-        }
-        
-        .form-message {
-            font-size: 10px;
-            line-height: 1.6rem;
-            padding: 4px 0 0;
-            text-align: center;
-        }
-        
-        .form-control:hover {
-            border-color: #1dbfaf;
+            border-color: var(--color1);
         }
         
         .form-group.invalid .form-control {
@@ -97,50 +82,51 @@
         .TextField,
         .PasswordField {
             display: block;
-            padding: 4px;
+            padding: 10px;
             width: 100%;
-            height: 34px;
             border: none;
             border-bottom: 0.5px solid #AAA;
-            font-family: 'Roboto', sans-serif;
             font-weight: 400;
-            font-size: 14px;
-            margin-bottom: 4px;
+            font-size: 0.9rem;
             transition: 0.2s ease;
             border-radius: var(--round);
         }
         
         .TextField:focus,
         .PasswordField:focus {
-            border-bottom: 1px solid #16a085;
-            color: #16a085;
+            border-bottom: 1px solid var(--color1);
+            color: var(--color1);
             transition: 0.2s ease;
         }
         
         #back-to-login,
         #sign-up-button {
-            margin-top: 15px;
             width: 100%;
-            height: 32px;
             text-align: center;
-            background: #626CCC;
+            background: var(--color2);
             border: none;
             outline: none;
-            border-radius: 25px;
+            border-radius: 10px;
             color: #FFF;
-            font-family: var(--finalFont);
+            /* font-family: var(--finalFont); */
             font-weight: 500;
+            padding: 10px;
             text-transform: uppercase;
             transition: 0.1s ease;
             cursor: pointer;
         }
         
-        .form-control:hover,
-        #sign-up-button:hover,
-        #sign-up-button:focus {
+        .form-control:hover{
             opacity: 0.8;
             box-shadow: 0 1px 2px #1dbfaf;
             transition: 0.2s ease;
+        }
+
+        #sign-up-button:hover,
+        #sign-up-button:focus,
+        #back-to-login:hover,
+        #back-to-login:focus {
+            filter: brightness(110%);
         }
         
         #sign-up-button:active {
@@ -152,4 +138,15 @@
         .register-content {
             text-align: center;
             margin-bottom: 5px;
+        }
+
+        @media (width < 1000px) {
+            form{
+                width: 80%;
+            }
+        }
+        @media (width < 700px) {
+            form{
+                width: 100%;
+            }
         }

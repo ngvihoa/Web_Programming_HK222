@@ -16,14 +16,16 @@ Trait Database
 
 	public function query($query, $data = [])
 	{
-
+		// show($query);
 		$con = $this->connect();
 		$stm = $con->prepare($query);
 
 		$check = $stm->execute($data);
 		if($check)
 		{
+			// show($check);
 			$result = $stm->fetchAll(\PDO::FETCH_OBJ);
+			// show($result);
 			if(is_array($result) && count($result))
 			{
 				return $result;

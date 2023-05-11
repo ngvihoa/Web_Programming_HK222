@@ -120,8 +120,8 @@
   display: flex;
   flex-direction: column;
   gap: 0px;
-  min-width: 180px;
-  max-width: 360px;
+  min-width: 200px;
+  max-width: 390px;
   /* border: 1px solid red; */
   padding: 20px;
   box-shadow: 0px 2px 5px #bebebe;
@@ -147,7 +147,12 @@
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  width: 100%;
 }
+
+/* .bound *{
+  border: 1px solid red;
+} */
 
 .block{
     min-height: 150px;
