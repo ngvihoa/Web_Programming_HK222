@@ -28,19 +28,21 @@
 
     <div class="central-frame">
         <div id="central-frame">
-            <form>
+            <form method="post">
                 <div class="search-container">
-                    <input type="text" name="search-input" id="search-input" placeholder="Find your candidates...">
+                    <input type="text" name="firstname" id="search-input" placeholder="Find your candidates...">
                     <button type="submit" id="search-button">Search</button>
                 </div>
 
                 <div class="filter-dropdown">
                     <div class="search-dropdown">
-                        <select name="job-title" id="job-title">
-                            <option value="">Select a job title</option>
-                            <option value="web-developer">Web Developer</option>
-                            <option value="software-engineer">Software Engineer</option>
-                            <option value="data-scientist">Data Scientist</option>
+                        <select name="jobtitle" id="job-title">
+                            <option value="" >Select a job title</option>
+                            <?php if(is_array($data['jobtitle'])): ?>      
+                            <?php foreach($data['jobtitle'] as $row): ?>
+                            <option value=<?=$row->jobtitle ?>><?=$row->jobtitle?></option>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </select>
                     </div>
 
@@ -57,11 +59,13 @@
 
 
                     <div class="search-dropdown">
-                        <select name="location" id="location">
+                        <select name="country" id="location">
                             <option value="">Select a location</option>
-                            <option value="new-york">New York</option>
-                            <option value="san-francisco">San Francisco</option>
-                            <option value="seattle">Seattle</option>
+                            <?php if(is_array($data['countries'])): ?>      
+                            <?php foreach($data['countries'] as $row): ?>
+                            <option value="<?=$row->country?>"><?=$row->country?></option>
+                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </select>
                     </div>
 
@@ -76,7 +80,7 @@
 
     <div class="cvFrame">
         <?php
-            if($error_no_found){
+            if(!$searchValue){
                 include 'search_no.view.php';
             }
             else{

@@ -20,7 +20,6 @@ class Signup
 		{
 			$data['user']->signup($_POST);
 		}
-
 		$this->view('signup',$data);
 	}
 

@@ -8,9 +8,10 @@ class Create_cv
 {
     use MainController;
 
-    public function index()
+    public function index($cvId)
     {
         $data = [];
+      
         $data['personal'] = new \Model\CV; // take care: firstname, lastname, city, country, jobtitle, hobby, userid
         $data['we'] = new \Model\WorkExp; // take care: jobtitle, starttime, endtime, company, description, country, cvid
         $data['ce'] = new \Model\Certificates; // take care: namecert, time, organization, description, cvid
@@ -311,4 +312,3 @@ class Create_cv
 
 
 }
-

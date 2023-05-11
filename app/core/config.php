@@ -16,10 +16,10 @@ if((empty($_SERVER['SERVER_NAME']) && php_sapi_name() == 'cli') || (!empty($_SER
 }else
 {
 	/** database config **/
-	define('DBNAME', 'mvc_db');
+	define('DBNAME', 'vcwebsite');
 	define('DBHOST', 'localhost');
-	define('DBUSER', 'root');
-	define('DBPASS', '');
+	define('DBUSER', 'admin');
+	define('DBPASS', 'password');
 	define('DBDRIVER', '');
 
 	define('ROOT', 'https://www.yourwebsite.com');

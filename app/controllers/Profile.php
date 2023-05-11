@@ -24,6 +24,7 @@ class Profile
         $this->view('profile', $data);
     }
 
+=======
     // public function profile_user(){
 
     //     $data = [];
@@ -76,6 +77,11 @@ class Profile
         }
 
 
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
+
         $data['p'] = 'profile_cv';
         $data['active_CV'] = 'active';
         $data['active_User'] = '';   
@@ -120,4 +126,3 @@ class Profile
 
 
 }
-

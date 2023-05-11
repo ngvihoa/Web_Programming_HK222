@@ -113,5 +113,5 @@ class User
 			$this->errors[$this->loginUniqueColumn] = "Wrong $this->loginUniqueColumn or password";
 		}
 	}
-
+	
 }
