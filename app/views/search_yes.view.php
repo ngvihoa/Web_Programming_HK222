@@ -1,116 +1,24 @@
 <div id="cvList">
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
+            <?php if(is_array($data['searchValue'])): ?>      
+                <?php foreach($data['searchValue'] as $row): ?>
+                <div id="cvDetail">
+                <a href="<?php echo ROOT."/" . "cvdetails/" .$row->cvid;?>" target="_blank">
                     <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
                     <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
+                        <div><span><?= $row->firstname.' '.$row->lastname; ?></span></div>
+                        <div><span><?= $row->jobtitle;?></span></div>
+                        <div class="country"><?= $row->city.' '.$row->country;?></div>
                     </div>
                 </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            <div id="cvDetail">
-                <a href="<?php echo ROOT ?>/cvdetails/1" target="_blank">
-                    <img src="<?php echo ROOT ?>/assets/images/user.jpg" loading='lazy' alt="avatar">
-                    <div class="secondColumn">
-                        <div><span>John Doe</span></div>
-                        <div><span>Web Developer</span></div>
-                        <div class="country">New York, USA</div>
-                    </div>
-                </a>
-            </div>
-            
+                </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
 
 
-        <div class="pagination">
-            <a href="#">Previous</a>
-            <div class="pagination-inner">
-                <a href="#" class="S_active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-            </div>
-            <a href="#">Next</a>
-        </div>
+        <!-- <div class="pagination"> -->
+        <?php
+            $page= new \Core\Pager;
+            $page->display();
+        ?>    
+        <!-- </div> -->

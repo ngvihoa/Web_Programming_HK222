@@ -10,7 +10,12 @@ class Profile
 
     public function index()
     {
-        $data['user'] = "Adam";
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
+            $data['email'] = $ses->user('email');
+            $data['phone'] = $ses->user('phone');
 
         $data['p'] = 'profile_user';
         $data['active_CV'] = '';
@@ -19,10 +24,29 @@ class Profile
         $this->view('profile', $data);
     }
 
+    public function profile_user(){
+
+        $data = [];
+        $ses = new \Core\Session;
+        // show($ses->user());
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
+            $data['email'] = $ses->user('email');
+            $data['phone'] = $ses->user('phone');
+
+
+        $data['p'] = 'profile_user';
+        $data['active_CV'] = '';
+        $data['active_User'] = 'active';
+        $this->view('profile', $data);
+    }
+
     public function profile_cv(){
 
-        $data['user'] = "Adam";
-
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
 
         $data['p'] = 'profile_cv';
         $data['active_CV'] = 'active';
@@ -34,18 +58,12 @@ class Profile
         $this->view('profile', $data);
     }
 
-    public function profile_user(){
-
-        $data['user'] = "Adam";
-
-        $data['p'] = 'profile_user';
-        $data['active_CV'] = '';
-        $data['active_User'] = 'active';
-        $this->view('profile', $data);
-    }
-
     public function delete_cv(){
-        $data['user'] = "Adam";
+
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
 
         $data['p'] = 'profile_cv';
         $data['active_CV'] = 'active';
@@ -59,4 +77,3 @@ class Profile
 
 
 }
-

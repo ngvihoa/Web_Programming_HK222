@@ -13,9 +13,10 @@ class Home
 
     public function index()
     {
-        // check cookies,...
-        // $data['user'] = "Adam";
         $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
 
         $this->view('home', $data);
     }

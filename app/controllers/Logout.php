@@ -15,7 +15,7 @@ class Logout
 	{
 		$ses = new \Core\Session;
  		$ses->logout();
- 		redirect('login');
+ 		redirect('home');
 	}
 
 }

@@ -1,24 +1,24 @@
 <?php
 
-class Create_cv
+namespace Controller;
+
+defined('ROOTPATH') OR exit('Access Denied!');
+
+class CVdetails
 {
-    use Controller;
+    use MainController;
 
-    public function index()
+    public function index($cvId)
     {
-        $this->view('create_cv');
-    }
+        $data = [];
+        $ses = new \Core\Session;
+        if($ses->is_logged_in())
+            $data['user'] = $ses->user('username');
 
-    public function insert_cv()
-    {
-        redirect('profile/profile_cv');
-    }
+        $data['cvId'] = $cvId;
 
-    public function edit_cv()
-    {
-        $this->view('edit_cv');
+        $this->view('cvdetails', $data);
     }
 
 
 }
-
