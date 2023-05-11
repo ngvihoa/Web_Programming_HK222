@@ -7,7 +7,7 @@
                     <div class="secondColumn">
                         <div><span><?= $row->firstname.' '.$row->lastname; ?></span></div>
                         <div><span><?= $row->jobtitle;?></span></div>
-                        <div class="country"><?= $row->city.' '.$row->country;?></div>
+                        <div class="country"><?= $row->city.', '.$row->country;?></div>
                     </div>
                 </a>
                 </div>
@@ -18,7 +18,7 @@
 
         <!-- <div class="pagination"> -->
         <?php
-            $page= new \Core\Pager;
-            $page->display();
+            //$page= new \Core\Pager;
+            //$page->display();
         ?>    
         <!-- </div> -->

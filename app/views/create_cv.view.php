@@ -14,7 +14,7 @@
     <title>CVblog.com</title>
 </head>
 <body>
-    <?php show($_POST)?>
+    <!-- <?php show($_POST)?> -->
 
     <div class="headbg">
         <img src="<?php echo ROOT ?>/assets/images/logo_green.png" alt="Logo" srcset="<?php echo ROOT ?>/assets/images/logo_green.png">
@@ -69,7 +69,7 @@
         </div>
         <!-- Work experiences -->
         <div class="block-boundary">
-            <h5><strong>Work experiences</strong></h5>
+            <h5><strong>Work experiences (optional)</strong></h5>
             <div class="block-boundary-content we" id="workexp0">
                 <hr>
                 <div class="block">
@@ -160,7 +160,7 @@
         </div>
         <!-- Education -->
         <div class="block-boundary">
-            <h5><strong>Education</strong></h5>
+            <h5><strong>Education (optional)</strong></h5>
             <div class="block-boundary-content ed" id="education0">
                 <hr>
                 <div class="block">
@@ -232,7 +232,7 @@
         </div>
         <!-- Certificates -->
         <div class="block-boundary">
-            <h5><strong>Certificates</strong></h5>
+            <h5><strong>Certificates (optional)</strong></h5>
             <div class="block-boundary-content ce" id="certificate0">
                 <hr>
                 <div class="block">

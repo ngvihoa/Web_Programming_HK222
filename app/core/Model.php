@@ -199,7 +199,7 @@ Trait Model
 						case 'alpha_numeric':
 
 							if(!preg_match("/^[a-zA-Z0-9]+$/", trim($data[$column])))
-								$this->errors[$column] = ucfirst($column) . " should only have alphabetical letters & spaces";
+								$this->errors[$column] = ucfirst($column) . " should only have alphabetical letters & numbers";
 							break;
 						case 'numeric':
 

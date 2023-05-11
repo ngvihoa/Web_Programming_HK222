@@ -8,7 +8,7 @@ class Create_cv
 {
     use MainController;
 
-    public function index($cvId)
+    public function index()
     {
         $data = [];
       
@@ -188,7 +188,6 @@ class Create_cv
                                 if(!empty($_POST['finish'.$i]) ){
                                     $s .= "-01";
                                 }
-
                                 $tmp = [
                                     'namecert' => $_POST['cert'.$i],
                                     'organization' => $_POST['org'.$i],
@@ -299,16 +298,11 @@ class Create_cv
         $this->view('create_cv', $data);
     }
 
-    // public function insert_cv()
+    // public function edit_cv()
     // {
-    //     redirect('profile/profile_cv');
+
+    //     $this->view('edit_cv');
     // }
-
-    public function edit_cv()
-    {
-
-        $this->view('create_cv');
-    }
 
 
 }
