@@ -9,21 +9,23 @@ Trait Database
 
 	private function connect()
 	{
-		$string = "mysql:hostname=".DBHOST.";dbname=".DBNAME;
+		$string = "mysql:host=".DBHOST.";dbname=".DBNAME;
 		$con = new \PDO($string,DBUSER,DBPASS);
 		return $con;
 	}
 
 	public function query($query, $data = [])
 	{
-
+		// show($query);
 		$con = $this->connect();
 		$stm = $con->prepare($query);
 
 		$check = $stm->execute($data);
 		if($check)
 		{
+			// show($check);
 			$result = $stm->fetchAll(\PDO::FETCH_OBJ);
+			// show($result);
 			if(is_array($result) && count($result))
 			{
 				return $result;

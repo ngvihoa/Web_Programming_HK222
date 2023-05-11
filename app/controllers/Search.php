@@ -10,6 +10,7 @@ class Search
     {
         $data = [];
         $ses = new \Core\Session;
+      
         $search = new \Model\Cv;
         $req = new \Core\Request;
         $data['countries']=$search->query("select distinct country from cv"); 
