@@ -24,7 +24,6 @@ class Profile
         $this->view('profile', $data);
     }
 
-=======
     // public function profile_user(){
 
     //     $data = [];
@@ -50,7 +49,7 @@ class Profile
             $data['user'] = $ses->user('username');
             
         // check the CV_id
-        $cv = new \Model\CV;
+        $cv = new \Model\CV_;
         $data['cv'] = $cv->first(['userid'=>$ses->user('userID')]);
         if($data['cv']){
             $data['cvId'] = $data['cv']->cvid;
@@ -103,7 +102,7 @@ class Profile
         
         // delete the CV
         // delete refs -> wes -> eds -> certs -> 
-        $cv = new \Model\CV;
+        $cv = new \Model\CV_;
         $check = $cv->first(['userid'=>$ses->user('userID')])->cvid;
         $re = new \Model\References;
         $re->delete($check, 'cvid');

@@ -12,7 +12,7 @@ class Create_cv
     {
         $data = [];
       
-        $data['personal'] = new \Model\CV; // take care: firstname, lastname, city, country, jobtitle, hobby, userid
+        $data['personal'] = new \Model\CV_; // take care: firstname, lastname, city, country, jobtitle, hobby, userid
         $data['we'] = new \Model\WorkExp; // take care: jobtitle, starttime, endtime, company, description, country, cvid
         $data['ce'] = new \Model\Certificates; // take care: namecert, time, organization, description, cvid
         $data['ed'] = new \Model\Degree; // take care: namedegree, gradtime, school, description, cvid
