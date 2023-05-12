@@ -40,7 +40,7 @@
                             <option value="" >Select a job title</option>
                             <?php if(is_array($data['jobtitle'])): ?>      
                             <?php foreach($data['jobtitle'] as $row): ?>
-                            <option value=<?=$row->jobtitle ?>><?=$row->jobtitle?></option>
+                            <option value="<?=$row->jobtitle?>"><?=$row->jobtitle?></option>
                             <?php endforeach; ?>
                             <?php endif; ?>
                         </select>

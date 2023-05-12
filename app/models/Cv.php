@@ -68,7 +68,7 @@ class Cv
 					if ($key=='firstname')
 						$query .= $key . " like '%". $data[$key] . "%' || lastname like '%". $data[$key] . "%";
 					if ($key=='country')
-						$query .= $key . " = '". $data[$key] . "' && "; 
+						$query .= $key . " like '". $data[$key] . "' && "; 
 				}
 			}
 			$query = trim($query," && ");
@@ -84,7 +84,7 @@ class Cv
 					if ($key=='jobtitle')
 						$query .= $key . " like '%". $data[$key] . "%' && ";
 					if ($key=='firstname')
-						$query .= $key . " like '%". $data[$key] . "%' or lastname like '%". $data[$key] . "%'";
+						$query .= $key . " like '%". $data[$key] . "%' or lastname like '%". $data[$key] . "%' ";
 					if ($key=='country')
 						$query .= $key . " = '". $data[$key] . "' && "; 
 				}
