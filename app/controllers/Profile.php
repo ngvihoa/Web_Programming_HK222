@@ -12,11 +12,11 @@ class Profile
     {
         $data = [];
         $ses = new \Core\Session;
-        if($ses->is_logged_in())
+        if($ses->is_logged_in()){
             $data['user'] = $ses->user('username');
             $data['email'] = $ses->user('email');
             $data['phone'] = $ses->user('phone');
-
+        }
         $data['p'] = 'profile_user';
         $data['active_CV'] = '';
         $data['active_User'] = 'active';
@@ -24,24 +24,58 @@ class Profile
         $this->view('profile', $data);
     }
 
-    public function profile_user(){
+=======
+    // public function profile_user(){
+
+    //     $data = [];
+    //     $ses = new \Core\Session;
+    //     // show($ses->user());
+    //     if($ses->is_logged_in())
+    //         $data['user'] = $ses->user('username');
+    //         $data['email'] = $ses->user('email');
+    //         $data['phone'] = $ses->user('phone');
+
+
+    //     $data['p'] = 'profile_user';
+    //     $data['active_CV'] = '';
+    //     $data['active_User'] = 'active';
+    //     $this->view('profile', $data);
+    // }
+
+    public function profile_cv(){
 
         $data = [];
         $ses = new \Core\Session;
-        // show($ses->user());
         if($ses->is_logged_in())
             $data['user'] = $ses->user('username');
-            $data['email'] = $ses->user('email');
-            $data['phone'] = $ses->user('phone');
+            
+        // check the CV_id
+        $cv = new \Model\CV;
+        $data['cv'] = $cv->first(['userid'=>$ses->user('userID')]);
+        if($data['cv']){
+            $data['cvId'] = $data['cv']->cvid;
+            $data['re'] = [];
+            $data['we'] = [];
+            $data['de'] = [];
+            $data['ce'] = [];
 
+            $re = new \Model\References;    
+            $we = new \Model\WorkExp;    
+            $de = new \Model\Degree;    
+            $ce = new \Model\Certificates;  
+            
+            // get ref, we, de, ce, personal
+            $data['re'] = $re->where(['cvid'=>$data['cvId']]);
+            $data['we'] = $we->where(['cvid'=>$data['cvId']]);
+            $data['de'] = $de->where(['cvid'=>$data['cvId']]);
+            $data['ce'] = $ce->where(['cvid'=>$data['cvId']]);
 
-        $data['p'] = 'profile_user';
-        $data['active_CV'] = '';
-        $data['active_User'] = 'active';
-        $this->view('profile', $data);
-    }
+            // show($data['re']);
+            // show($data['we']);
+            // show($data['de']);
+            // show($data['ce']);
+        }
 
-    public function profile_cv(){
 
         $data = [];
         $ses = new \Core\Session;
@@ -52,8 +86,6 @@ class Profile
         $data['active_CV'] = 'active';
         $data['active_User'] = '';   
         
-        // check the CV_id
-        $data['cvId'] = 99999;
         
         $this->view('profile', $data);
     }
@@ -69,8 +101,25 @@ class Profile
         $data['active_CV'] = 'active';
         $data['active_User'] = '';   
         
-        // delete the CV_id
-        unset($data['cvId']);
+        // delete the CV
+        // delete refs -> wes -> eds -> certs -> 
+        $cv = new \Model\CV;
+        $check = $cv->first(['userid'=>$ses->user('userID')])->cvid;
+        $re = new \Model\References;
+        $re->delete($check, 'cvid');
+
+        $we = new \Model\WorkExp;
+        $we->delete($check, 'cvid');
+
+        $de = new \Model\Degree;
+        $de->delete($check, 'cvid');
+
+        $ce = new \Model\Certificates;
+        $ce->delete($check, 'cvid');
+
+        $cv->delete($ses->user('userID'), 'userid');
+
+        unset($cvId);
         
         $this->view('profile', $data);
     }

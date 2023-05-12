@@ -14,7 +14,7 @@ Trait Model
 	public $limit 		= 10;
 	public $offset 		= 0;
 	public $order_type 	= "desc";
-	public $order_column = "id";
+	// public $order_column = "id";
 	public $errors 		= [];
 
 	public function findAll()
@@ -240,6 +240,9 @@ Trait Model
 							}
 							break;
 						
+						// case 'm_y':
+						// 	$time = explode(' ', $data[$column]);
+
 						default:
 							$this->errors['rules'] = "The rule ". $rule . " was not found!";
 							break;
