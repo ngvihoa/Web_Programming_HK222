@@ -1,16 +1,17 @@
 <?php
 
-/**
- * Image manipulation class
- */
 namespace Model;
 
 defined('ROOTPATH') OR exit('Access Denied!');
 
+/**
+ * User class
+ */
 class Cv
 {
 	use Database;
-	
+	use Model;
+
 	protected $table = 'cv';
 	protected $primaryKey = 'cvid';
 	
@@ -36,7 +37,7 @@ class Cv
 			return $result;
 		}
 		if($data['degree']){
-			$query = "select cvid from degree where namedegree = '".$data['degree']."'";
+			$query = "select cvid from degree where namedegree like '%".$data['degree']."%'";
 			$result = $this->query($query);
 			// unset($result['0']);
 			// return $result;
@@ -61,7 +62,7 @@ class Cv
 					if ($key=='firstname')
 						$query .= $key . " like '%". $data[$key] . "%' || lastname like '%". $data[$key] . "%";
 					if ($key=='country')
-						$query .= $key . " = '". $data[$key] . "' && "; 
+					$query .= $key . " like '%". $data[$key] . "%' && "; 
 				}
 			}
 			$query = trim($query," && ");
@@ -77,8 +78,7 @@ class Cv
 					if ($key=='jobtitle')
 						$query .= $key . " like '%". $data[$key] . "%' && ";
 					if ($key=='firstname')
-						$query .= $key . " like '%". $data[$key] . "%' or lastname like '%". $data[$key] . "%'";
-					if ($key=='country')
+					$query .= $key . " like '%". $data[$key] . "%' or lastname like '%". $data[$key] . "%'";					if ($key=='country')
 						$query .= $key . " = '". $data[$key] . "' && "; 
 				}
 			}
@@ -88,5 +88,4 @@ class Cv
 			return $result;
 		}
 	}
-
 }
