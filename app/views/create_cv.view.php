@@ -14,8 +14,6 @@
     <title>CVblog.com</title>
 </head>
 <body>
-    <!-- <?php show($_POST)?> -->
-
     <div class="headbg">
         <img src="<?php echo ROOT ?>/assets/images/logo_green.png" alt="Logo" srcset="<?php echo ROOT ?>/assets/images/logo_green.png">
         
@@ -108,7 +106,7 @@
                 <div id="addition-we-boundary">
                     <?php
                     $i = 1;
-                    while(isset($_POST['jobtitle'.$i])){
+                    while(isset($_POST['jobtitle'.$i]) && !empty($_POST['jobtitle'.$i])){
                         echo "<div class='block-boundary-content we show' id='workexp".$i."'>
                         <div class='bar'></div>
                         <div class='block'>

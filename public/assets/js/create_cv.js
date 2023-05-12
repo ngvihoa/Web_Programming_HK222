@@ -27,33 +27,33 @@ function addWE(){
     <div class="block">
         <div class="sub-block">
             <label for="jobtitle">Job Title <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('jobtitle${nextId}') ?>" name="jobtitle${nextId}" id="jobtitle${nextId}" placeholder="e.g. Backend Developer" >
+            <input type="text" value="" name="jobtitle${nextId}" id="jobtitle${nextId}" placeholder="e.g. Backend Developer" >
         </div>
         <div class="sub-block">
             <label for="wecountry">Country <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('wecountry${nextId}')?>" name="wecountry${nextId}" id="wecountry${nextId}" placeholder="e.g. Vietnam" >
+            <input type="text" value="" name="wecountry${nextId}" id="wecountry${nextId}" placeholder="e.g. Vietnam" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="company">Company <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('company${nextId}')?>" name="company${nextId}" id="company${nextId}" placeholder="e.g. Backend Developer" >
+            <input type="text" value="" name="company${nextId}" id="company${nextId}" placeholder="e.g. Backend Developer" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="start">Start Date <span class="star">*<span></label>
-            <input type="month" value="<?= old_value('start${nextId}')?>" name="start${nextId}" id="start${nextId}" placeholder="e.g. Backend Developer" >
+            <input type="month" value="" name="start${nextId}" id="start${nextId}" placeholder="e.g. Backend Developer" >
         </div>
         <div class="sub-block">
             <label for="end">End Date <span class="star">*<span></label>
-            <input type="month" value="<?= old_value('end${nextId}')?>" name="end${nextId}" id="end${nextId}" placeholder="e.g. Backend Developer" >
+            <input type="month" value="" name="end${nextId}" id="end${nextId}" placeholder="e.g. Backend Developer" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="wed">Description</label>
-            <textarea type="text" value="<?= old_value('wed${nextId}')?>" name="wed${nextId}" id="wed${nextId}"></textarea>
+            <textarea type="text" value="" name="wed${nextId}" id="wed${nextId}"></textarea>
         </div>
     </div>
     <button name="delete-we-button" onclick="deleteWE(${nextId})" type="button" id="deletewe${nextId}">Delete</button>
@@ -68,25 +68,25 @@ function addED(){
     <div class="block">
         <div class="sub-block">
             <label for="degree">Degree <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('degree${nextId}')?>" name="degree${nextId}" id="degree${nextId}" placeholder="e.g. Bachelor of Computer Science" >
+            <input type="text" value="" name="degree${nextId}" id="degree${nextId}" placeholder="e.g. Bachelor of Computer Science" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="school">School <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('school${nextId}')?>" name="school${nextId}" id="school${nextId}" placeholder="e.g. University of Technology" >
+            <input type="text" value="" name="school${nextId}" id="school${nextId}" placeholder="e.g. University of Technology" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="gradate">Graduated Date <span class="star">*<span></label>
-            <input type="month" value="<?= old_value('gradate${nextId}')?>" name="gradate${nextId}" id="gradate${nextId}" placeholder="" >
+            <input type="month" value="" name="gradate${nextId}" id="gradate${nextId}" placeholder="" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="edd">Description</label>
-            <textarea type="text" value="<?= old_value('edd${nextId}')?>" name="edd${nextId}" id="edd${nextId}"></textarea>
+            <textarea type="text" value="" name="edd${nextId}" id="edd${nextId}"></textarea>
         </div>
     </div>
     <button name="delete-ed-button" onclick="deleteED(${nextId})" type="button" id="deleteed${nextId}">Delete</button>
@@ -101,25 +101,25 @@ function addCE(){
     <div class="block">
         <div class="sub-block">
             <label for="cert">Certificate <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('cert${nextId}')?>" name="cert${nextId}" id="cert${nextId}" placeholder="e.g. Beginner of Computer Science" >
+            <input type="text" value="" name="cert${nextId}" id="cert${nextId}" placeholder="e.g. Beginner of Computer Science" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="org">Organization <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('org${nextId}')?>" name="org${nextId}" id="org${nextId}" placeholder="e.g. Hacker Rank" >
+            <input type="text" value="" name="org${nextId}" id="org${nextId}" placeholder="e.g. Hacker Rank" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="finish">Finish Date <span class="star">*<span></label>
-            <input type="month" value="<?= old_value('finish${nextId}')?>" name="finish${nextId}" id="finish${nextId}" placeholder="" >
+            <input type="month" value="" name="finish${nextId}" id="finish${nextId}" placeholder="" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="ced">Description</label>
-            <textarea type="text" value="<?= old_value('ced${nextId}')?>" name="ced${nextId}" id="ced${nextId}"></textarea>
+            <textarea type="text" value="" name="ced${nextId}" id="ced${nextId}"></textarea>
         </div>
     </div>
     <button name="delete-ce-button" onclick="deleteCE(${nextId})" type="button" id="deletece${nextId}">Delete</button>
@@ -134,27 +134,27 @@ function addREF(){
     <div class="block">
         <div class="sub-block">
             <label for="refname">Name <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('refname${nextId}')?>" name="refname${nextId}" id="refname${nextId}" placeholder="e.g. John Doe" >
+            <input type="text" value="" name="refname${nextId}" id="refname${nextId}" placeholder="e.g. John Doe" >
         </div>
         <div class="sub-block">
             <label for="rel">Relationship <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('rel${nextId}')?>" name="rel${nextId}" id="rel${nextId}" placeholder="e.g. Project Manager" >
+            <input type="text" value="" name="rel${nextId}" id="rel${nextId}" placeholder="e.g. Project Manager" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="refcomp">Company <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('refcomp${nextId}')?>" name="refcomp${nextId}" id="refcomp${nextId}" placeholder="" >
+            <input type="text" value="" name="refcomp${nextId}" id="refcomp${nextId}" placeholder="" >
         </div>
     </div>
     <div class="block">
         <div class="sub-block">
             <label for="refmail">Email <span class="star">*<span></label>
-            <input type="email" value="<?= old_value('refmail${nextId}')?>" name="refmail${nextId}" id="refmail${nextId}" placeholder="e.g. example@gmail.com" >
+            <input type="email" value="" name="refmail${nextId}" id="refmail${nextId}" placeholder="e.g. example@gmail.com" >
         </div>
         <div class="sub-block">
             <label for="refphone">Phone <span class="star">*<span></label>
-            <input type="text" value="<?= old_value('refphone${nextId}')?>" name="refphone${nextId}" id="refphone${nextId}" placeholder="" >
+            <input type="text" value="" name="refphone${nextId}" id="refphone${nextId}" placeholder="" >
         </div>
     </div>
     <button name="delete-ref-button" onclick="deleteREF(${nextId})" type="button" id="deleteref${nextId}">Delete</button>

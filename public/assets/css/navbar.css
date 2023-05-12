@@ -36,7 +36,7 @@ nav .nav-item {
 } */
 
 nav .myhello {
-  width: 150px;
+  min-width: 250px;
   color: var(--color);
   height: 100%;
   display: flex;
@@ -46,9 +46,10 @@ nav .myhello {
   text-align: center;
   border: none;
   gap: 10px;
-  padding: 10px 0;
+  padding: 0px 20px 0 0;
   /* font-weight: bold; */
   text-decoration: none;
+  /* border: 1px solid red; */
 }
 
 nav .myhello a{
@@ -161,4 +162,18 @@ nav .myhello a:hover{
   height: 3px;
   background-color: var(--color2);
   transition: 0.3s ease;
+}
+
+@media (width < 1000px) {
+  nav .myhello{
+    justify-content: unset;
+  }
+  /* nav .myhello a{
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--color);
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+  } */
 }
