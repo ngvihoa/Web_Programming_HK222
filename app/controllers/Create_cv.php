@@ -191,7 +191,7 @@ class Create_cv
                                 $tmp = [
                                     'namecert' => $_POST['cert'.$i],
                                     'organization' => $_POST['org'.$i],
-                                    'time' => $_POST['finish'.$i],
+                                    'time' => $s,
                                     'description' => $_POST['ced'.$i],
                                     'cvid' => ''
                                 ];

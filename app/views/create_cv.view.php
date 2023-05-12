@@ -83,7 +83,7 @@
                 <div class="block">
                     <div class="sub-block">
                         <label for="company0">Company <span class="star">*<span></label>
-                        <input type="text" value="<?= old_value('company0')?>" name="company0" id="company0" placeholder="e.g. Backend Developer">
+                        <input type="text" value="<?= old_value('company0')?>" name="company0" id="company0" placeholder="e.g. Meta">
                     </div>
                 </div>
                 <div class="block">
@@ -122,7 +122,7 @@
                         <div class='block'>
                             <div class='sub-block'>
                                 <label for='company'>Company <span class='star'>*<span></label>
-                                <input type='text' value='".old_value('company'.$i)."' name='company".$i."' id='company".$i."' placeholder='e.g. Backend Developer' >
+                                <input type='text' value='".old_value('company'.$i)."' name='company".$i."' id='company".$i."' placeholder='e.g. Meta' >
                             </div>
                         </div>
                         <div class='block'>

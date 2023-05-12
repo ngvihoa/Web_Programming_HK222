@@ -37,7 +37,7 @@ function addWE(){
     <div class="block">
         <div class="sub-block">
             <label for="company">Company <span class="star">*<span></label>
-            <input type="text" value="" name="company${nextId}" id="company${nextId}" placeholder="e.g. Backend Developer" >
+            <input type="text" value="" name="company${nextId}" id="company${nextId}" placeholder="e.g. Meta" >
         </div>
     </div>
     <div class="block">
