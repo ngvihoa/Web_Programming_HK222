@@ -51,8 +51,8 @@
                     <div class="search-dropdown">
                         <select name="degree" id="degree">
                             <option value="">Select a degree</option>
-                            <option value="bachelors">Bachelor's Degree</option>
-                            <option value="masters">Master's Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
                             <option value="phd">PhD</option>
                         </select>
                     </div>

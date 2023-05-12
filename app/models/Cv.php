@@ -13,12 +13,18 @@ class Cv
 	
 	protected $table = 'cv';
 	protected $primaryKey = 'cvid';
-	
-	public $limit = 10;
-	// public $offset = ($page_number - 1) * $limit;
-	public $order_type 	= "desc";
+	// // public $offset = ($page_number - 1) * $limit;
+	// public $order_type 	= "desc";
 	public $order_column = "cvid";
 	public $errors 		= [];
+	protected $allowedColumns = [
+			'firstname',
+			'lastname',
+			'jobtitle',
+			'city',
+			'country',
+			'hobby'
+		];
 
 	public function search($data=[])
 	{
@@ -36,11 +42,12 @@ class Cv
 			return $result;
 		}
 		if($data['degree']){
-			$query = "select cvid from degree where namedegree = '".$data['degree']."'";
+
+			$query = "select cvid from degree where namedegree like '%".$data['degree']."%' ";
 			$result = $this->query($query);
 			// unset($result['0']);
 			// return $result;
-
+			// return $query;
 			if(!$result)
 				return false;
 			// return $keys;

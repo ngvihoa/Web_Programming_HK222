@@ -22,7 +22,7 @@ class Search
             $result = $search->search($_POST);
             // show($result);
         }
-        
+        // show($result);
         $data['searchValue'] = $result;
         $this->view('search',$data);
 
