@@ -40,7 +40,7 @@
                             <option value="" >Select a job title</option>
                             <?php if(is_array($data['jobtitle'])): ?>      
                             <?php foreach($data['jobtitle'] as $row): ?>
-                            <option value=<?=$row->jobtitle ?>><?=$row->jobtitle?></option>
+                            <option value="<?=$row->jobtitle?>"><?=$row->jobtitle?></option>
                             <?php endforeach; ?>
                             <?php endif; ?>
                         </select>
@@ -51,8 +51,8 @@
                     <div class="search-dropdown">
                         <select name="degree" id="degree">
                             <option value="">Select a degree</option>
-                            <option value="bachelors">Bachelor's Degree</option>
-                            <option value="masters">Master's Degree</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
                             <option value="phd">PhD</option>
                         </select>
                     </div>

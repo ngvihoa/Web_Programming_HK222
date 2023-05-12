@@ -37,7 +37,7 @@ class Cv
 			return $result;
 		}
 		if($data['degree']){
-			$query = "select cvid from degree where namedegree = '".$data['degree']."'";
+			$query = "select cvid from degree where namedegree like '%".$data['degree']."%'";
 			$result = $this->query($query);
 			// unset($result['0']);
 			// return $result;
@@ -62,7 +62,7 @@ class Cv
 					if ($key=='firstname')
 						$query .= $key . " like '%". $data[$key] . "%' || lastname like '%". $data[$key] . "%";
 					if ($key=='country')
-						$query .= $key . " = '". $data[$key] . "' && "; 
+						$query .= $key . " like '%". $data[$key] . "%' && "; 
 				}
 			}
 			$query = trim($query," && ");
