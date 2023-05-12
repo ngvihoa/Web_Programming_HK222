@@ -7,140 +7,86 @@ defined('ROOTPATH') OR exit('Access Denied!');
 /**
  * User class
  */
-class CV
+class Cv
 {
-	
+	use Database;
 	use Model;
 
 	protected $table = 'cv';
-	protected $primaryKey = 'userid';
-	protected $order_column = 'cvid';
+	protected $primaryKey = 'cvid';
+	
+	public $limit = 10;
+	// public $offset = ($page_number - 1) * $limit;
+	public $order_type 	= "desc";
+	public $order_column = "cvid";
+	public $errors 		= [];
 
-	// protected $loginUniqueColumn = 'username';
-
-	protected $allowedColumns = [
-		'firstname',
-		'lastname',
-		'jobtitle',
-		'country',
-		'userid',
-		'hobby',
-		'city'
-	];
-
-	/*****************************
-	 * 	rules include:
-		required
-		alpha_space
-		email
-		numeric
-		unique
-		symbol
-		longer_than_8_chars
-		alpha_numeric_symbol
-		alpha_numeric
-		alpha_space
-	 * 
-	 ****************************/
-	protected $onInsertValidationRules = [
-
-		'firstname' => [
-			'alpha_space',
-			'required'
-		],
-		'lastname' => [
-			'alpha_space',
-			'required'
-		],
-		'jobtitle' => [
-			'alpha_space',
-			'required'
-		],
-		'city' => [
-			'alpha_space',
-			'required'
-		],
-		'country' => [
-			'alpha_space',
-			'required'
-		],
-		'userid' => [
-			'required'
-		]
-	];
-
-	protected $onUpdateValidationRules = [
-
-		'firstname' => [
-			'alpha_space',
-			'required',
-		],
-		'lastname' => [
-			'alpha_space',
-			'required',
-		],
-		'jobtitle' => [
-			'alpha_space',
-			'required',
-		],
-		'city' => [
-			'alpha_space',
-			'required',
-		],
-		'country' => [
-			'alpha_space',
-			'required',
-		],
-
-		'userid' => [
-			'required',
-		]
-	];
+	public function search($data=[])
+	{
+		if(!$data){
+			$page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+			$page_number = $page_number < 1 ? 1 : $page_number;
 
 
-	public function vld($data){
-		return $this->validate($data);
+			$query = "select * from cv order by cvid desc ";
+
+			$result = $this->query($query);
+			if(!$result)
+				return false;
+			// return $query;
+			return $result;
+		}
+		if($data['degree']){
+			$query = "select cvid from degree where namedegree = '".$data['degree']."'";
+			$result = $this->query($query);
+			// unset($result['0']);
+			// return $result;
+
+			if(!$result)
+				return false;
+			// return $keys;
+			$query = "select * from cv where cvid in (";
+			foreach ($result as $key) {
+					$query .= $key->cvid .",";
+				}
+				// endforeach; 
+			$query=substr_replace($query ,"",-1);
+			$query.=") ";
+			$query.=" && ";
+			unset($data['degree']);
+			$keys = array_keys($data);
+			foreach ($keys as $key) {
+				if(!empty($data[$key])){
+					if ($key=='jobtitle')
+						$query .= $key . " like '%". $data[$key] . "%' && ";
+					if ($key=='firstname')
+						$query .= $key . " like '%". $data[$key] . "%' || lastname like '%". $data[$key] . "%";
+					if ($key=='country')
+						$query .= $key . " = '". $data[$key] . "' && "; 
+				}
+			}
+			$query = trim($query," && ");
+			// return $query;
+			$result = $this->query($query);
+			return $result;
+		}
+		else{
+			$query = "select * from cv where ";
+			$keys = array_keys($data);
+			foreach ($keys as $key) {
+				if(!empty($data[$key])){
+					if ($key=='jobtitle')
+						$query .= $key . " like '%". $data[$key] . "%' && ";
+					if ($key=='firstname')
+						$query .= $key . " like '%". $data[$key] . "%' or lastname like '%". $data[$key] . "%'";
+					if ($key=='country')
+						$query .= $key . " = '". $data[$key] . "' && "; 
+				}
+			}
+			$query = trim($query," && ");
+			// return $query;
+			$result = $this->query($query);
+			return $result;
+		}
 	}
-
-	// public function create_submit($data){
-	// 	$returnCvId = '';
-	// 	if($this->validate($data)){
-	// 		$this->insert($data);
-
-	// 	}
-
-	// 	return $returnCvId
-	// }
-
-	// public function signup($data)
-	// {
-	// 	if($this->validate($data))
-	// 	{
-	// 		//add extra user columns here
-	// 		$data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
-	// 		$this->insert($data);
-	// 		redirect('login');
-	// 	}
-	// }
-
-	// public function login($data)
-	// {
-	// 	$row = $this->first([$this->loginUniqueColumn=>$data[$this->loginUniqueColumn]]);
-
-	// 	if($row){
-
-	// 		//confirm password
-	// 		if(password_verify($data['password'], $row->password))
-	// 		{
-	// 			$ses = new \Core\Session;
-	// 			$ses->auth($row);
-	// 			redirect('home');
-	// 		}else{
-	// 			$this->errors[$this->loginUniqueColumn] = "Wrong $this->loginUniqueColumn or password";
-	// 		}
-	// 	}else{
-	// 		$this->errors[$this->loginUniqueColumn] = "Wrong $this->loginUniqueColumn or password";
-	// 	}
-	// }
-
 }

@@ -1,16 +1,17 @@
 <?php
 
-/**
- * Image manipulation class
- */
 namespace Model;
 
 defined('ROOTPATH') OR exit('Access Denied!');
 
+/**
+ * User class
+ */
 class Cv
 {
 	use Database;
-	
+	use Model;
+
 	protected $table = 'cv';
 	protected $primaryKey = 'cvid';
 	
@@ -88,5 +89,4 @@ class Cv
 			return $result;
 		}
 	}
-
 }
